@@ -8,7 +8,7 @@ const routes: Routes = [
     path: 'listar', component: ListarUsuarioComponent
   },
   {
-    path: 'logout', component: LoginComponent
+    path: 'login', component: LoginComponent
   }
 ];
 

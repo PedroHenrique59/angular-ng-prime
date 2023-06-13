@@ -1,6 +1,7 @@
-<p-menubar [model]="items" >
+<p-menubar [model]="items" [hidden]="esconderMenu()">
   <div>
-    <button pButton label="Sair" icon="fa fa-sign-out" style="margin-right: 5px" [routerLink]="['/logout']"></button>
+    <button pButton label="Sair" icon="fa fa-sign-out" style="margin-right: 5px" [routerLink]="['/login']"
+            (click)="logout()"></button>
   </div>
 </p-menubar>
 <router-outlet></router-outlet>

@@ -1,1 +1,17 @@
-<p>login works!</p>
+<div style="margin-top: 20px">
+  <span class="ui-float-label">
+    <label for="input-login">Login ou E-mail</label>
+    <input id="input-login" type="text" size="20" pInputText [(ngModel)]="login.username">
+</span>
+</div>
+
+<div style="margin-top: 20px">
+  <span class="ui-float-label">
+    <label for="input-senha">Senha</label>
+    <input id="input-senha" type="text" size="20" pInputText [(ngModel)]="login.senha">
+</span>
+</div>
+
+<div style="margin-top: 20px">
+  <p-button label="Acessar" (click)="logar()" ></p-button>
+</div>
