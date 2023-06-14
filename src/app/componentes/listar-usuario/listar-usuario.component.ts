@@ -26,7 +26,7 @@ export class ListarUsuarioComponent implements OnInit {
 
   carregarUsuarios() {
     this.usuarioService.listarTodos().subscribe(retorno => {
-      this.listaUsuarios = retorno;
+      this.listaUsuarios = retorno.content;
     });
   }
 
