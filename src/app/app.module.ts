@@ -9,6 +9,8 @@ import {ButtonModule} from 'primeng/button';
 import {MenubarModule} from 'primeng/menubar';
 import { ListarUsuarioComponent } from './componentes/listar-usuario/listar-usuario.component';
 import { LoginComponent } from './componentes/login/login.component';
+import {TableModule} from 'primeng/table';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,10 +21,12 @@ import { LoginComponent } from './componentes/login/login.component';
     imports: [
         BrowserModule,
         AppRoutingModule,
+        HttpClientModule,
         InputTextModule,
         FormsModule,
         ButtonModule,
-        MenubarModule
+        MenubarModule,
+        TableModule
     ],
   providers: [],
   bootstrap: [AppComponent]
