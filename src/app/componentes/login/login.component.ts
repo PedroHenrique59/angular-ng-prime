@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Login} from '../../model/login';
-import {Router} from '@angular/router';
+import {LoginService} from '../../services/login.service';
 
 @Component({
   selector: 'app-login',
@@ -9,17 +9,16 @@ import {Router} from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  login: Login = new Login();
+  usuario = {login: '', senha: ''};
 
-  constructor(private route: Router) {
+  constructor(private loginService: LoginService) {
   }
 
   ngOnInit() {
   }
 
   logar() {
-    localStorage.setItem('token', 'token');
-    this.route.navigate(['/']);
+    this.loginService.login(this.usuario);
   }
 
 }
