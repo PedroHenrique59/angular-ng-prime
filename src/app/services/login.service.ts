@@ -19,6 +19,8 @@ export class LoginService {
 
         localStorage.setItem('token', token);
 
+        alert(token);
+
         this.router.navigate(['/']);
       },
       error => {
