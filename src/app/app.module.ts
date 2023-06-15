@@ -12,6 +12,7 @@ import {LoginComponent} from './componentes/login/login.component';
 import {TableModule} from 'primeng/table';
 import {HttpClientModule} from '@angular/common/http';
 import {HttpInterceptorModule} from './services/header-interceptor.service';
+import {PaginatorModule} from 'primeng/paginator';
 
 @NgModule({
   declarations: [
@@ -19,17 +20,18 @@ import {HttpInterceptorModule} from './services/header-interceptor.service';
     ListarUsuarioComponent,
     LoginComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    HttpInterceptorModule,
-    InputTextModule,
-    FormsModule,
-    ButtonModule,
-    MenubarModule,
-    TableModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        HttpInterceptorModule,
+        InputTextModule,
+        FormsModule,
+        ButtonModule,
+        MenubarModule,
+        TableModule,
+        PaginatorModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

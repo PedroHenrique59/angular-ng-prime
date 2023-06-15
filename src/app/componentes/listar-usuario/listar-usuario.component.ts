@@ -14,6 +14,8 @@ export class ListarUsuarioComponent implements OnInit {
 
   listaUsuarios: Array<Usuario> = [];
 
+  totalElementos: number;
+
   cols: any[];
 
   ngOnInit() {
@@ -27,7 +29,13 @@ export class ListarUsuarioComponent implements OnInit {
   carregarUsuarios() {
     this.usuarioService.listarTodos().subscribe(retorno => {
       this.listaUsuarios = retorno.content;
+      this.totalElementos = retorno.totalElements;
     });
   }
 
+  paginate(event) {
+    this.usuarioService.getStudentListPage(event.page).subscribe(retorno => {
+      this.listaUsuarios = retorno.content;
+    });
+  }
 }
