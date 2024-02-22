@@ -12,16 +12,15 @@ export class LoginService {
   }
 
   login(usuario) {
-    return this.http.post(ConstantesUrl.baseLogin, JSON.stringify(usuario)).subscribe(data => {
+
+    return this.http.post(ConstantesUrl.baseLogin, JSON.parse(JSON.stringify(usuario))).subscribe(data => {
         /*Retorno HTTP*/
 
-        const token = (JSON.parse(JSON.stringify(data)).Authorization.split(' ')[1]);
+        const token = (JSON.parse(JSON.stringify(data))).accessToken;
 
         localStorage.setItem('token', token);
 
-        alert(token);
-
-        this.router.navigate(['/']);
+        this.router.navigate(['listar']);
       },
       error => {
         console.error('Erro ao gerar o token de login');

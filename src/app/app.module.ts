@@ -7,18 +7,18 @@ import {InputTextModule} from 'primeng/inputtext';
 import {FormsModule} from '@angular/forms';
 import {ButtonModule} from 'primeng/button';
 import {MenubarModule} from 'primeng/menubar';
-import {ListarUsuarioComponent} from './componentes/listar-usuario/listar-usuario.component';
 import {LoginComponent} from './componentes/login/login.component';
 import {TableModule} from 'primeng/table';
 import {HttpClientModule} from '@angular/common/http';
 import {HttpInterceptorModule} from './services/header-interceptor.service';
 import {PaginatorModule} from 'primeng/paginator';
+import {ListarLivrosComponent} from './componentes/livros/listar-livros/listar-livros.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListarUsuarioComponent,
-    LoginComponent
+    LoginComponent,
+    ListarLivrosComponent
   ],
     imports: [
         BrowserModule,

@@ -1,15 +1,19 @@
-<div style="margin-top: 20px">
+<div>
+  <img src="favicon.ico" alt="Angular">
+</div>
+
+<div>
   <span class="ui-float-label">
-    <input id="input-login" type="text" size="20" pInputText placeholder="Login" [(ngModel)]="usuario.login">
+    <input id="input-login" type="text" size="40" pInputText placeholder="Login" [(ngModel)]="usuario.username"/>
 </span>
 </div>
 
-<div style="margin-top: 20px">
+<div>
   <span class="ui-float-label">
-    <input id="input-senha" type="password" size="20" pInputText placeholder="Senha" [(ngModel)]="usuario.senha">
+    <input id="input-senha" type="password" size="40" pInputText placeholder="Senha" [(ngModel)]="usuario.password"/>
 </span>
 </div>
 
-<div style="margin-top: 20px">
+<div>
   <p-button label="Acessar" (click)="logar()" ></p-button>
 </div>
