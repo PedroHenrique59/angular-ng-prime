@@ -20,13 +20,19 @@ export class AppComponent implements OnInit {
     }
     this.items = [
       {
-        label: 'Gerenciar Usuário',
+        label: 'Gerenciar Livro',
         icon: 'pi pi-user',
-        items: [{
-          label: 'Cadastrar',
+        items: [
+          {
+          label: 'Listar',
           icon: 'pi pi-fw pi-plus',
           routerLink: '/listar'
-        }
+          },
+          {
+            label: 'Cadastrar',
+            icon: 'pi pi-fw pi-plus',
+            routerLink: '/'
+          },
         ]
       }
     ];

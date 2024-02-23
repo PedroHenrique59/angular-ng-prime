@@ -12,11 +12,11 @@ export class UsuarioService {
   }
 
   listarTodos(): Observable<any> {
-    return this.http.get<any>(ConstantesUrl.baseUrl);
+    return this.http.get<any>(ConstantesUrl.baseLogin);
   }
 
   getStudentListPage(pagina): Observable<any> {
-    return this.http.get<any>(ConstantesUrl.baseUrl + 'page/' + pagina);
+    return this.http.get<any>(ConstantesUrl.baseLogin + 'page/' + pagina);
   }
 
 }

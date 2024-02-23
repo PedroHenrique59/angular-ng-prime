@@ -8,8 +8,8 @@ export class ConstantesUrl {
     return this.baseServidor + 'auth/signin';
   }
 
-  public static get baseUrl(): string {
-    return this.baseServidor + 'cursospringrestapi/usuario/';
+  public static get baseUrlBook(): string {
+    return this.baseServidor + 'api/book/v1';
   }
 
   public static get baseUrlPath(): string {

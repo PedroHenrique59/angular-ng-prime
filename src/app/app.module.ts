@@ -13,6 +13,8 @@ import {HttpClientModule} from '@angular/common/http';
 import {HttpInterceptorModule} from './services/header-interceptor.service';
 import {PaginatorModule} from 'primeng/paginator';
 import {ListarLivrosComponent} from './componentes/livros/listar-livros/listar-livros.component';
+import {DataViewModule} from 'primeng/dataview';
+import {PanelModule} from 'primeng/panel';
 
 @NgModule({
   declarations: [
@@ -20,18 +22,20 @@ import {ListarLivrosComponent} from './componentes/livros/listar-livros/listar-l
     LoginComponent,
     ListarLivrosComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        HttpClientModule,
-        HttpInterceptorModule,
-        InputTextModule,
-        FormsModule,
-        ButtonModule,
-        MenubarModule,
-        TableModule,
-        PaginatorModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    HttpInterceptorModule,
+    InputTextModule,
+    FormsModule,
+    ButtonModule,
+    MenubarModule,
+    TableModule,
+    PaginatorModule,
+    DataViewModule,
+    PanelModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

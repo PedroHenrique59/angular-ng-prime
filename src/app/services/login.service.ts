@@ -20,7 +20,7 @@ export class LoginService {
 
         localStorage.setItem('token', token);
 
-        this.router.navigate(['listar']);
+        this.router.navigate(['/']);
       },
       error => {
         console.error('Erro ao gerar o token de login');

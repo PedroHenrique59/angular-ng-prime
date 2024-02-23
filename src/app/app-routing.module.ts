@@ -9,6 +9,9 @@ const routes: Routes = [
   },
   {
     path: 'login', component: LoginComponent
+  },
+  {
+    path: 'cadastrarLivro', component: LoginComponent
   }
 ];
 
