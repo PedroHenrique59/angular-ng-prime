@@ -9,13 +9,11 @@
           <input id="input-author" type="text" [size]="livro.author.length" pInputText [(ngModel)]="livroUpdate.author" [value]="livro.author"/>
         </div>
         <div class="ui-g-12">
-          <input id="input-price" type="text" pInputText [(ngModel)]="livroUpdate.price" [value]="livro.price"/>
+          <input id="input-price" type="text" pInputText [(ngModel)]="livroUpdate.price" [value]="livro.price | currency: 'BRL'"/>
         </div>
-        <div class="ui-g-12">Price: <b>{{livro.price | currency: 'BRL'}}</b></div>
         <div class="ui-g-12">
-          <input id="input-launch" type="text" pInputText [(ngModel)]="livroUpdate.launchDate" [value]="livro.launchDate"/>
+          <input id="input-launch" type="text" pInputText [(ngModel)]="livroUpdate.launchDate" [value]="livro.launchDate | date: 'dd/MM/yyyy'"/>
         </div>
-        <div class="ui-g-12">LaunchDate: <b>{{livro.launchDate | date: 'dd/MM/yyyy'}}</b></div>
       </div>
     </div>
   </div>
