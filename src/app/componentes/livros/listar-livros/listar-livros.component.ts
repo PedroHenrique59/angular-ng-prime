@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {BookVoList} from '../../../model/bookVoList';
 import {LivroService} from '../../../services/livro.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-listar-livros',
@@ -9,7 +10,7 @@ import {LivroService} from '../../../services/livro.service';
 })
 export class ListarLivrosComponent implements OnInit {
 
-  constructor(private service: LivroService) {
+  constructor(private service: LivroService, private route: Router) {
   }
 
   listaLivros: BookVoList[];
@@ -23,13 +24,15 @@ export class ListarLivrosComponent implements OnInit {
   }
 
   paginate(event) {
-
     this.service.listarTodos(event.page).subscribe(livro => {
       this.listaLivros = livro._embedded.bookVOList;
       this.totalElementos = livro.page.totalElements;
     });
-
     this.scrollUpPage();
+  }
+
+  editar(id) {
+    this.route.navigate(['/incluirEditar', id]);
   }
 
   scrollUpPage() {

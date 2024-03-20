@@ -7,9 +7,6 @@
             <input type="search" pInputText placeholder="Buscar um livro" (keyup)="dv.filter($event.target.value)">
           </div>
         </div>
-        <div class="ui-g-6 ui-md-4" style="text-align:right">
-          <p-dataViewLayoutOptions></p-dataViewLayoutOptions>
-        </div>
       </div>
     </div>
   </p-header>
@@ -21,22 +18,12 @@
           <div class="ui-g">
             <div class="ui-g-12">Title: <b>{{livro.title}}</b></div>
             <div class="ui-g-12">Author: <b>{{livro.author}}</b></div>
-            <div class="ui-g-12">Price: <b>{{livro.price}}</b></div>
-            <div class="ui-g-12">LaunchDate: <b>{{livro.launchDate}}</b></div>
+            <div class="ui-g-12">Price: <b>{{livro.price | currency: 'BRL'}}</b></div>
+            <div class="ui-g-12">LaunchDate: <b>{{livro.launchDate | date: 'dd/MM/yyyy'}}</b></div>
+            <button pButton type="button" (click)="editar(livro.id)" label="Editar"></button>
           </div>
         </div>
-
       </div>
-    </div>
-  </ng-template>
-  <ng-template let-livro pTemplate="gridItem">
-    <div style="padding:.5em" class="ui-g-12 ui-md-3">
-      <p-panel [header]="livro.title" [style]="{'text-align':'center'}">
-        <img src="favicon.ico" width="60">
-        <div class="car-detail">{{livro.title}} - {{livro.author}}</div>
-        <hr class="ui-widget-content" style="border-top:0">
-        <button pButton type="button" icon="pi pi-search" style="margin-top:0"></button>
-      </p-panel>
     </div>
   </ng-template>
 </p-dataView>

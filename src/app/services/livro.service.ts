@@ -21,4 +21,8 @@ export class LivroService {
     });
   }
 
+  obterPorId(id): Observable<any> {
+    return this.http.get<any>(ConstantesUrl.baseUrlBook + '/' + id);
+  }
+
 }
