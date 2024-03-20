@@ -15,12 +15,14 @@ import {PaginatorModule} from 'primeng/paginator';
 import {ListarLivrosComponent} from './componentes/livros/listar-livros/listar-livros.component';
 import {DataViewModule} from 'primeng/dataview';
 import {PanelModule} from 'primeng/panel';
+import { IncluirEditarLivroComponent } from './componentes/incluir-editar/incluir-editar-livro/incluir-editar-livro.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    ListarLivrosComponent
+    ListarLivrosComponent,
+    IncluirEditarLivroComponent
   ],
   imports: [
     BrowserModule,
