@@ -3,16 +3,21 @@
     <div>
       <div class="ui-g">
         <div class="ui-g-12">
-          <input id="input-title" type="text" [size]="livro.title.length" pInputText [(ngModel)]="livroUpdate.title" [value]="livro.title"/>
+          <input id="input-title" type="text" [size]="120" pInputText [(ngModel)]="livro.title"/>
         </div>
         <div class="ui-g-12">
-          <input id="input-author" type="text" [size]="livro.author.length" pInputText [(ngModel)]="livroUpdate.author" [value]="livro.author"/>
+          <input id="input-author" type="text" [size]="120" pInputText [(ngModel)]="livro.author"/>
         </div>
         <div class="ui-g-12">
-          <input id="input-price" type="text" pInputText [(ngModel)]="livroUpdate.price" [value]="livro.price | currency: 'BRL'"/>
+          <input id="input-price" type="text" pInputText currencyMask
+                 [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',', align: 'left' }" [(ngModel)]="livro.price"/>
         </div>
         <div class="ui-g-12">
-          <input id="input-launch" type="text" pInputText [(ngModel)]="livroUpdate.launchDate" [value]="livro.launchDate | date: 'dd/MM/yyyy'"/>
+          <input id="input-launch" type="text" pInputText [(ngModel)]="livro.launchDate"/>
+        </div>
+        <div class="ui-g-12">
+          <button pButton type="button" (click)="voltar()" label="Voltar"></button>
+          <button style="margin-left: 5px" pButton type="button" (click)="salvar()" label="Salvar"></button>
         </div>
       </div>
     </div>

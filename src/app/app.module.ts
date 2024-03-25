@@ -15,7 +15,15 @@ import {PaginatorModule} from 'primeng/paginator';
 import {ListarLivrosComponent} from './componentes/livros/listar-livros/listar-livros.component';
 import {DataViewModule} from 'primeng/dataview';
 import {PanelModule} from 'primeng/panel';
-import { IncluirEditarLivroComponent } from './componentes/incluir-editar/incluir-editar-livro/incluir-editar-livro.component';
+import {IncluirEditarLivroComponent} from './componentes/incluir-editar/incluir-editar-livro/incluir-editar-livro.component';
+import {CurrencyMaskModule} from 'ng2-currency-mask';
+import {InputMaskModule} from 'primeng/inputmask';
+
+import { LOCALE_ID } from '@angular/core';
+import { registerLocaleData } from '@angular/common';
+import localePt from '@angular/common/locales/pt';
+
+registerLocaleData(localePt);
 
 @NgModule({
   declarations: [
@@ -36,9 +44,13 @@ import { IncluirEditarLivroComponent } from './componentes/incluir-editar/inclui
     TableModule,
     PaginatorModule,
     DataViewModule,
-    PanelModule
+    PanelModule,
+    CurrencyMaskModule,
+    InputMaskModule
   ],
-  providers: [],
+  providers: [
+    {provide: LOCALE_ID, useValue: 'pt-BR'}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
